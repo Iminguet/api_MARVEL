@@ -6,6 +6,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 https://iminguet.github.io/api_MARVEL/
 
+## AWS Deploy. Only from deploy branch.
+
+https://deploy.d3emmyy5ix9ett.amplifyapp.com/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
