@@ -1,0 +1,125 @@
+#hamnav {
+  width: 100%;
+
+  background: #000;
+
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.menubarra {
+  display: flex;
+}
+#hamitems {
+  display: flex;
+}
+#hamitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#hamitems a:hover {
+  background: #af0d0d;
+}
+
+#hamnav label,
+#hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+  }
+
+  #hamnav label {
+    display: inline-block;
+    color: white;
+    background: #a02620;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  #hamitems {
+    display: none;
+  }
+  #hamnav input:checked ~ #hamitems {
+    display: block;
+  }
+}
+
+/* styling navlist */
+#navlist {
+  background-color: #0074d9;
+  position: absolute;
+  width: 100%;
+}
+/* styling navlist anchor element */
+#navlist a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.navlist-right {
+  float: right;
+}
+/* hover effect of navlist anchor element */
+#navlist a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* styling search bar */
+.search input[type="text"] {
+  background-color: red;
+  width: 300px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+}
+
+.search button {
+  color: #f2f2f2;
+  float: right;
+  padding: 5px 10px;
+  margin-right: 16px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+#aside {
+  width: 15vw;
+  height: 90vh;
+  position: fixed;
+  background-color: red;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .main {
+    width: 90%;
+    margin-left: 15vw;
+    background-color: green;
+  }
+}
