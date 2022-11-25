@@ -1,0 +1,18 @@
+<div class="nano" *ngIf="characterArray != null">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let kilo of characterArray.data.results"
+  >
+    <img
+      src="{{ kilo.thumbnail.path }}.{{ kilo.thumbnail.extension }}"
+      alt="{{ kilo.name }}"
+    />
+    <h6>{{ kilo.name }}</h6>
+    <div class="card-body">
+      <a href="{{ kilo.url }}" class="btn btn-primary"
+        >Página de {{ kilo.name }}</a
+      >
+    </div>
+  </div>
+</div>
