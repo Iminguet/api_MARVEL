@@ -119,6 +119,8 @@
   align-items: flex-start;
   .main {
     width: 90%;
+    height: 88vh;
+    overflow: hidden;
     margin-left: 15vw;
     background-color: green;
   }
