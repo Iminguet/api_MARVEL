@@ -1,1 +1,14 @@
-<p>creators works!</p>
+<div class="nano" *ngIf="creatorsArray != null">
+  <div class="carjeta" *ngFor="let creator of creatorsArray.data.results">
+    <div class="elementCard">
+      <img
+        src="{{ creator.thumbnail.path }}.{{ creator.thumbnail.extension }}"
+        alt="{{ creator.name }}"
+      />
+      <h6>{{ creator.title }}</h6>
+      <div class="cbody">
+        <a href="{{ creator.url }}" class="button">{{ creator.description }}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,7 @@
 #hamnav {
   width: 100%;
-
+  z-index: 1;
   background: #000;
-
   position: sticky;
   top: 0;
   display: flex;
@@ -108,7 +107,7 @@
 
 #aside {
   width: 15vw;
-  height: 90vh;
+  height: 100vh;
   position: fixed;
   background-color: red;
 }
@@ -120,6 +119,10 @@
   .main {
     width: 90%;
     margin-left: 15vw;
-    background-color: green;
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
   }
 }

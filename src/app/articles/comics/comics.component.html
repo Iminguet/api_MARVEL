@@ -1,1 +1,14 @@
-<p>comics works!</p>
+<div class="nano" *ngIf="comicsArray != null">
+  <div class="carjeta" *ngFor="let comic of comicsArray.data.results">
+    <div class="elementCard">
+      <img
+        src="{{ comic.thumbnail.path }}.{{ comic.thumbnail.extension }}"
+        alt="{{ comic.name }}"
+      />
+      <h6>{{ comic.title }}</h6>
+      <div class="cbody">
+        <a href="{{ comic.url }}" class="button">{{ comic.description }}</a>
+      </div>
+    </div>
+  </div>
+</div>

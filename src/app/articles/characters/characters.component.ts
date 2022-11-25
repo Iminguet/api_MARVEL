@@ -13,7 +13,7 @@ export class CharactersComponent {
 
   ngOnInit() {
     this.characterData
-      .returnCharacter()
+      .returnCharacters()
       .subscribe((character) => (this.characterArray = character));
   }
 }

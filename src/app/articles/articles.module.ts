@@ -7,6 +7,7 @@ import { CharactersService } from './characters.service';
 import { CharactersComponent } from './characters/characters.component';
 import { ComicsComponent } from './comics/comics.component';
 import { CreatorsComponent } from './creators/creators.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CreatorsComponent } from './creators/creators.component';
     CharactersComponent,
     ComicsComponent,
     CreatorsComponent,
+    PaginationComponent,
   ],
   imports: [CommonModule, HttpClientModule],
   providers: [CharactersService],
