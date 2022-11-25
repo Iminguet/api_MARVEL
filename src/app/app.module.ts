@@ -7,7 +7,11 @@ import { ArticlesModule } from './articles/articles.module';
 
 @NgModule({
   declarations: [AppComponent],
+<<<<<<< HEAD
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ArticlesModule],
+=======
+  imports: [BrowserModule, AppRoutingModule],
+>>>>>>> main
   providers: [],
   bootstrap: [AppComponent],
 })
