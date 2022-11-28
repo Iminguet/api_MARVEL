@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 5vh;
+  background-color: brown;
+  text-align: left;
+  justify-content: space-between;
+  display: flex;
+}
+
+.flex-container0 {
+  background-color: rgb(164, 246, 0);
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  height: 8vh;
+  width: 20vh;
+}
+
+.flex-container01 {
+  background-color: rgb(10, 187, 10);
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  height: 4vh;
+  width: 12vh;
+}
+
+.TextCenter{
+
+  text-align: center;
+}
+
+
+.user1{
+
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(10, 153, 117);
+  justify-content: center;
+
+
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  padding: 2vh 2vh;
+
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 10vh;
+  background-color: blue;
+  padding: 1vh;
+}
+
+section {
+  flex: 10vh;
+  background-color: rgb(64, 255, 0);
+  padding: 1vh;
+}
+
+.seccion1{
+
+  width: 20em;
+
+
+
+}
+
+.flex-container {
+  display: grid;
+  background-color: rgb(235, 34, 34);
+
+
+
+
+}
+
+
+.flex-container100 {
+  display: grid;
+  background-color: rgb(202, 98, 0);
+  justify-content: center;
+}
+
+.flex-container22{
+
+  background-color: rgb(0, 18, 138);
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  height: 4vh;
+  width: 100%;
+
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+
+
+
+
+}
+
+
+.flex-container  {
+  background-color: rgb(39, 156, 117);
+
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+
+
+}
+.flex-container div{
+  width: 100%;
+  background-color: rgb(0, 216, 254);
+
+  margin-bottom: 1vh;
+
+  margin-top: 1vh;
+
+
+
+
+}
+
+footer {
+  flex: 10vh;
+  padding: 1vh;
+  text-align: center;
+  background-color: blueviolet;
+}
+
+/* ---------------------------------------------- */
+
+#div1 {
+  overflow: scroll;
+  height: 30vh;
+  width:100%;
+}
+#div1 table {
+  width: 100%;
+  background-color: rgb(121, 121, 121);
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
+
+
+
+
+
+
+
