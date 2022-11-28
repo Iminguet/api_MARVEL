@@ -18,12 +18,42 @@
   </div>
 </nav>
 <div class="mainContainer">
-  <div id="aside"></div>
-<<<<<<< HEAD
-  <div class="main"><router-outlet></router-outlet></div>
-=======
-  <div class="main">
-    <router-outlet></router-outlet>
+  <div id="aside">
+    <a
+      class="button"
+      routerLink="/characters"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+    >
+      Characters
+    </a>
+    |
+    <a
+      class="button"
+      routerLink="/comics"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+    >
+      Comics
+    </a>
+    |
+    <a
+      class="button"
+      routerLink="/creators"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+    >
+      Authors
+    </a>
+    |
+    <a
+      class="button"
+      routerLink="/events"
+      routerLinkActive="activebutton"
+      ariaCurrentWhenActive="page"
+    >
+      Events
+    </a>
   </div>
->>>>>>> main
+  <div class="main"><router-outlet></router-outlet></div>
 </div>

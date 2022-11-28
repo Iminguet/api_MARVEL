@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CharactersService } from '../characters.service';
 @Component({
   selector: 'app-pagination',
@@ -6,9 +6,14 @@ import { CharactersService } from '../characters.service';
   styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
-  constructor() {}
+  constructor() {
+    service: CharactersService;
+  }
 
-  forward() {}
+  @Input() offset?: number;
+  @Input() limit?: number;
 
-  back() {}
+  ngOnInit(): void {
+    // nextPage();
+  }
 }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -13,11 +14,19 @@ export class CharactersService {
   characters: string = 'characters';
   comics: string = 'comics';
   creators: string = 'creators';
-
-  limit: number = 12;
+  events: string = 'events';
+  id: number = 1011334;
+  limit: number = 16;
   offSet: number = 0;
 
   baserUrl: string = 'https://gateway.marvel.com:443/v1/public/';
+
+  // nextPage() {
+  //   this.offSet += this.limit;
+  // }
+  // previusPage() {
+  //   this.offSet -= this.limit;
+  // }
 
   // generalUrl: string = `${this.baserUrl}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`;
 
@@ -37,5 +46,34 @@ export class CharactersService {
     return this.http.get(
       `${this.baserUrl}${this.creators}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`
     );
+  }
+
+  returnEvents() {
+    return this.http.get(
+      `${this.baserUrl}${this.events}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`
+    );
+  }
+
+  // getCharacterId(id: number) {
+  //   return of(
+  //     `${this.baserUrl}${this.characters}/${id}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`
+  //   );
+  // }
+  getCharacterId(id: number) {
+    return this.http.get(
+      `${this.baserUrl}${this.characters}/${id}${this.apiKey}`
+    );
+  }
+
+  getComicId(id: number) {
+    return this.http.get(`${this.baserUrl}${this.comics}/${id}${this.apiKey}`);
+  }
+
+  nextPage() {
+    this.offSet += this.limit;
+  }
+
+  previusPage() {
+    this.offSet -= this.limit;
   }
 }

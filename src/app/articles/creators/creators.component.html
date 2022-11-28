@@ -3,11 +3,13 @@
     <div class="elementCard">
       <img
         src="{{ creator.thumbnail.path }}.{{ creator.thumbnail.extension }}"
-        alt="{{ creator.name }}"
+        alt="{{ creator.fullName }}"
       />
-      <h6>{{ creator.title }}</h6>
+      <h6>{{ creator.fullName }}</h6>
       <div class="cbody">
-        <a href="{{ creator.url }}" class="button">{{ creator.description }}</a>
+        <a href="{{ creator.url }}" class="button">{{
+          creator.comics.items
+        }}</a>
       </div>
     </div>
   </div>
