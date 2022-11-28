@@ -6,7 +6,6 @@
   width: 100%;
 
   .carjeta {
-    z-index: 0;
     width: 15vw;
     height: 20vw;
     margin: 0.5em;
@@ -28,6 +27,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 3vw;
         background-color: rgb(245, 239, 233);
         width: 100%;
