@@ -4,7 +4,7 @@ import { CharactersService } from '../characters.service';
 @Component({
   selector: 'app-comics',
   templateUrl: './comics.component.html',
-  styleUrls: ['./comics.component.scss'],
+  styleUrls: ['./comics.component.scss', '../../app.component.scss'],
 })
 export class ComicsComponent {
   constructor(private characterData: CharactersService) {}

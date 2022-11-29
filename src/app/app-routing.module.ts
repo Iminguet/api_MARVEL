@@ -11,6 +11,7 @@ import { CharacterdetailComponent } from './articles/characterdetail/characterde
 import { ComicdetailComponent } from './articles/comicdetail/comicdetail.component';
 import { CreatordetailComponent } from './articles/creatordetail/creatordetail.component';
 import { EventdetailComponent } from './articles/eventdetail/eventdetail.component';
+import { AboutusComponent } from './aboutus/aboutus/aboutus.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginFormComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'detailcomic/:id', component: ComicdetailComponent },
   { path: 'detailcreator/:id', component: CreatordetailComponent },
   { path: 'detailevent/:id', component: EventdetailComponent },
+  { path: 'about', component: AboutusComponent },
 ];
 
 @NgModule({

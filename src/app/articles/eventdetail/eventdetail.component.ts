@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-eventdetail',
   templateUrl: './eventdetail.component.html',
-  styleUrls: ['./eventdetail.component.scss'],
+  styleUrls: ['./eventdetail.component.scss', '../../app.componentdetail.scss'],
 })
 export class EventdetailComponent {
   event: any = {};

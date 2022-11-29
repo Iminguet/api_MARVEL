@@ -1,8 +1,10 @@
+<app-pagination></app-pagination>
 <div class="nano" *ngIf="characterArray != null">
   <div class="carjeta" *ngFor="let character of characterArray.data.results">
     <a routerLink="/detail/{{ character.id }}">
       <div class="elementCard">
         <img
+          class="circular"
           src="{{ character.thumbnail.path }}/standard_amazing.{{
             character.thumbnail.extension
           }}"

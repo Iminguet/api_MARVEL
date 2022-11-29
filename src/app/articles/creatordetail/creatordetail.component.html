@@ -14,7 +14,6 @@
       <h5>id: {{ creator.data.results[0].id }}</h5>
       <h5>Start date: {{ creator.data.results[0].start | date }}</h5>
       <h5>End date: {{ creator.data.results[0].end | date }}</h5>
-
       <p>{{ creator.data.results[0].description }}</p>
       <!--<div *ngIf="creator.data.results[0].description != ''; else elseBlock">
         <p>{{ creator.data.results[0].description }}</p>
@@ -25,18 +24,19 @@
       </ng-template> -->
 
       <div class="anchors">
-        <a href="{{ creator.data.results[0].urls[0].url }}"
-          >Marvel's official detail web</a
-        >
-        <a href="{{ creator.data.results[0].urls[1].url }}"
-          >Marvel's official wiki</a
-        >
-        <h1>{{ creator.data.results[0].fullName }}</h1>
-
+        <a href="{{ creator.data.results[0].urls[0].url }}">
+          Marvel's official detail web
+        </a>
+        <a href="{{ creator.data.results[0].urls[1].url }}">
+          Marvel's official wiki
+        </a>
+        <h1>{{ creator.data.results[0].fullName }}Kilo</h1>
         <!--   <a href="{{ creator.data.results[0].urls[2].url }}"
           >Marvel's official creators hub</a
         > -->
+        <h1>{{ creator.data.results[0].fullName }}</h1>
       </div>
+      <a href="">{{ hola }}</a>
     </div>
   </div>
 

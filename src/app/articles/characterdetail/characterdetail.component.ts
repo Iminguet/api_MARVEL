@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CharactersService } from '../characters.service';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-characterdetail',
   templateUrl: './characterdetail.component.html',
-  styleUrls: ['./characterdetail.component.scss'],
+  styleUrls: [
+    './characterdetail.component.scss',
+    '../../app.componentdetail.scss',
+  ],
 })
 export class CharacterdetailComponent implements OnInit {
   character: any = {};

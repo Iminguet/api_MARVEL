@@ -6,12 +6,15 @@ import { CharactersService } from '../characters.service';
   styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
-  constructor() {
-    service: CharactersService;
+  constructor(private service: CharactersService) {}
+
+  nextPage() {
+    this.service.nextPage();
   }
 
-  @Input() offset?: number;
-  @Input() limit?: number;
+  previusPage() {
+    this.service.previusPage();
+  }
 
   ngOnInit(): void {
     // nextPage();

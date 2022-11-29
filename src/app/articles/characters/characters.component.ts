@@ -4,7 +4,7 @@ import { CharactersService } from '../characters.service';
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss'],
+  styleUrls: ['./characters.component.scss', '../../app.component.scss'],
 })
 export class CharactersComponent {
   constructor(private characterData: CharactersService) {}

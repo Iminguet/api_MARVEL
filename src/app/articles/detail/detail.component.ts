@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.scss'],
+  styleUrls: ['./detail.component.scss', '../../app.component.scss'],
 })
 export class DetailComponent implements OnInit {
   character: any = {};

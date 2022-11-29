@@ -20,15 +20,6 @@ export class CharactersService {
 
   baserUrl: string = 'https://gateway.marvel.com:443/v1/public/';
 
-  // nextPage() {
-  //   this.offSet += this.limit;
-  // }
-  // previusPage() {
-  //   this.offSet -= this.limit;
-  // }
-
-  // generalUrl: string = `${this.baserUrl}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`;
-
   returnCharacters() {
     return this.http.get(
       `${this.baserUrl}${this.characters}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`
@@ -53,11 +44,6 @@ export class CharactersService {
     );
   }
 
-  // getCharacterId(id: number) {
-  //   return of(
-  //     `${this.baserUrl}${this.characters}/${id}${this.apiKey}&limit=${this.limit}&offset=${this.offSet}`
-  //   );
-  // }
   getCharacterId(id: number) {
     return this.http.get(
       `${this.baserUrl}${this.characters}/${id}${this.apiKey}`
@@ -78,14 +64,15 @@ export class CharactersService {
     return this.http.get(`${this.baserUrl}${this.events}/${id}${this.apiKey}`);
   }
 
-  vamos(url: string) {
-    console.log(url);
-  }
   nextPage() {
-    this.offSet += this.limit;
+    return this.http.get(
+      `${this.baserUrl}${this.characters}${this.apiKey}&limit=${
+        this.limit
+      }&offset=${(this.offSet += this.limit)}`
+    );
   }
 
   previusPage() {
-    this.offSet -= this.limit;
+    return (this.offSet -= this.limit);
   }
 }

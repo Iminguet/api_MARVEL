@@ -5,7 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-comicdetail',
   templateUrl: './comicdetail.component.html',
-  styleUrls: ['./comicdetail.component.scss'],
+  styleUrls: ['./comicdetail.component.scss', '../../app.componentdetail.scss'],
 })
 export class ComicdetailComponent {
   comic: any = {};

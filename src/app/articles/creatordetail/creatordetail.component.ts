@@ -5,11 +5,14 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-creatordetail',
   templateUrl: './creatordetail.component.html',
-  styleUrls: ['./creatordetail.component.scss'],
+  styleUrls: [
+    './creatordetail.component.scss',
+    '../../app.componentdetail.scss',
+  ],
 })
-export class CreatordetailComponent {
+export class CreatordetailComponent implements OnInit {
   creator: any = {};
-
+  hola: string = 'Hola';
   id: any;
 
   constructor(
