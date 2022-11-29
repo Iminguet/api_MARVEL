@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
+import { FormControl, FormsModule } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { UserservicesService } from 'src/app/Services/userservices.service';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
   styleUrls: ['./register-form.component.scss'],
 })
-export class RegisterFormComponent implements OnInit {
+export class RegisterFormComponent {
   formReg: FormGroup;
 
   constructor(
@@ -21,7 +20,6 @@ export class RegisterFormComponent implements OnInit {
       password: new FormControl(),
     });
   }
-  ngOnInit(): void {}
 
   onSubmit() {
     this.userService
