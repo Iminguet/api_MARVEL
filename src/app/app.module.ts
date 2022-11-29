@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ArticlesModule } from './articles/articles.module';
 import { WebPersistentModule } from './web-persistent/web-persistent.module';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { RegisterModule } from './register/register.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +23,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
     WebPersistentModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    ReactiveFormsModule,
+    RegisterModule,
   ],
 
   providers: [],
