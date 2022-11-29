@@ -1,17 +1,17 @@
 <div class="nano" *ngIf="eventsArray != null">
   <div class="carjeta" *ngFor="let event of eventsArray.data.results">
-    <div class="elementCard">
-      <img
-        src="{{ event.thumbnail.path }}.{{ event.thumbnail.extension }}"
-        alt="{{ event.title }}"
-      />
-      <h6>{{ event.title }}</h6>
-      <div class="cbody">
-        <a href="{{ event.urls[0].url }}" class="button">
-          Marvel web site
-          {{ event.urls[0].type }}
-        </a>
-      </div>
-    </div>
+    <a routerLink="/detailevent/{{ event.id }}">
+      <div class="elementCard">
+        <img
+          src="{{ event.thumbnail.path }}/standard_fantastic.{{
+            event.thumbnail.extension
+          }}"
+          alt="{{ event.title }}"
+        />
+        <div class="cbody">
+          <h6>{{ event.title }}</h6>
+        </div>
+      </div></a
+    >
   </div>
 </div>

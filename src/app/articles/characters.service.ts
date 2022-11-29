@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +16,7 @@ export class CharactersService {
   events: string = 'events';
   id: number = 1011334;
   limit: number = 16;
-  offSet: number = 0;
+  offSet: number = 50;
 
   baserUrl: string = 'https://gateway.marvel.com:443/v1/public/';
 
@@ -69,6 +68,19 @@ export class CharactersService {
     return this.http.get(`${this.baserUrl}${this.comics}/${id}${this.apiKey}`);
   }
 
+  getCreatorId(id: number) {
+    return this.http.get(
+      `${this.baserUrl}${this.creators}/${id}${this.apiKey}`
+    );
+  }
+
+  getEventId(id: number) {
+    return this.http.get(`${this.baserUrl}${this.events}/${id}${this.apiKey}`);
+  }
+
+  vamos(url: string) {
+    console.log(url);
+  }
   nextPage() {
     this.offSet += this.limit;
   }

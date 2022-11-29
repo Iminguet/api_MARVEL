@@ -10,6 +10,10 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { EventsComponent } from './events/events.component';
 import { DetailComponent } from './detail/detail.component';
 import { RouterModule } from '@angular/router';
+import { ComicdetailComponent } from './comicdetail/comicdetail.component';
+import { CreatordetailComponent } from './creatordetail/creatordetail.component';
+import { EventdetailComponent } from './eventdetail/eventdetail.component';
+import { CharacterdetailComponent } from './characterdetail/characterdetail.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { RouterModule } from '@angular/router';
     PaginationComponent,
     EventsComponent,
     DetailComponent,
+    ComicdetailComponent,
+    CreatordetailComponent,
+    EventdetailComponent,
+    CharacterdetailComponent,
   ],
   imports: [CommonModule, HttpClientModule, RouterModule],
   providers: [CharactersService],

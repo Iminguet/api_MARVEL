@@ -1,25 +1,18 @@
 <div class="nano" *ngIf="characterArray != null">
   <div class="carjeta" *ngFor="let character of characterArray.data.results">
-    <div class="elementCard">
-      <a routerLink="/detail/{{ character.id }}">
+    <a routerLink="/detail/{{ character.id }}">
+      <div class="elementCard">
         <img
-          src="{{ character.thumbnail.path }}.{{
+          src="{{ character.thumbnail.path }}/standard_amazing.{{
             character.thumbnail.extension
           }}"
           alt="{{ character.name }}"
-      /></a>
-      <h6>{{ character.id }}</h6>
-      <div class="cbody">
-        <a href="{{ character.url }}" class="button">{{ character.name }}</a>
-        <a
-          class="button"
-          routerLink="/events/"
-          routerLinkActive="activebutton"
-          ariaCurrentWhenActive="page"
-        >
-          Events
-        </a>
-      </div>
-    </div>
+        />
+
+        <div class="cbody">
+          <h4>{{ character.name }}</h4>
+        </div>
+      </div></a
+    >
   </div>
 </div>
