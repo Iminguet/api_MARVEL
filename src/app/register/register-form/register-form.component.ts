@@ -8,5 +8,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class RegisterFormComponent implements OnInit {
   formReg = FormGroup;
+
+  constructor() {
+    // private userService: UserService;
+  }
   ngOnInit(): void {}
 }
