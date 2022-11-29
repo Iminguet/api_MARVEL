@@ -1,0 +1,63 @@
+<div class="detalle" *ngIf="character != null">
+  <div class="imageAnTitle">
+    <img
+      src="{{ character.data.results[0].thumbnail.path }}/portrait_incredible.{{
+        character.data.results[0].thumbnail.extension
+      }}"
+      alt="{{ character.data.results[0].name }}"
+    />
+    <div class="info">
+      <h1>{{ character.data.results[0].name }}</h1>
+      <h5>id: {{ character.data.results[0].id }}</h5>
+
+      <div *ngIf="character.data.results[0].description != ''; else elseBlock">
+        <p>{{ character.data.results[0].description }}</p>
+      </div>
+      <ng-template #elseBlock
+        >There is no information about {{ character.data.results[0].name }}, try
+        in the links below
+      </ng-template>
+
+      <div class="anchors">
+        <a href="{{ character.data.results[0].urls[0].url }}"
+          >Marvel's official detail web</a
+        >
+        <a href="{{ character.data.results[0].urls[1].url }}"
+          >Marvel's official wiki</a
+        >
+        <a href="{{ character.data.results[0].urls[2].url }}"
+          >Marvel's official comics hub</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="listItems">
+    <div class="list">
+      <div class="cabeceraLista">comics</div>
+      <div *ngFor="let comic of character.data.results[0].comics.items">
+        <div>
+          {{ comic.name }}
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Series</div>
+      <div *ngFor="let serie of character.data.results[0].series.items">
+        <div>{{ serie.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Events</div>
+      <div *ngFor="let event of character.data.results[0].events.items">
+        <div>{{ event.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Stories</div>
+      <div *ngFor="let storie of character.data.results[0].stories.items">
+        <div>{{ storie.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>

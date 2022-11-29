@@ -1,18 +1,20 @@
+<app-pagination></app-pagination>
 <div class="nano" *ngIf="characterArray != null">
-  <div
-    class="card"
-    style="width: 18rem"
-    *ngFor="let kilo of characterArray.data.results"
-  >
-    <img
-      src="{{ kilo.thumbnail.path }}.{{ kilo.thumbnail.extension }}"
-      alt="{{ kilo.name }}"
-    />
-    <h6>{{ kilo.name }}</h6>
-    <div class="card-body">
-      <a href="{{ kilo.url }}" class="btn btn-primary"
-        >Página de {{ kilo.name }}</a
-      >
-    </div>
+  <div class="carjeta" *ngFor="let character of characterArray.data.results">
+    <a routerLink="/detail/{{ character.id }}">
+      <div class="elementCard">
+        <img
+          class="circular"
+          src="{{ character.thumbnail.path }}/standard_amazing.{{
+            character.thumbnail.extension
+          }}"
+          alt="{{ character.name }}"
+        />
+
+        <div class="cbody">
+          <h4>{{ character.name }}</h4>
+        </div>
+      </div></a
+    >
   </div>
 </div>

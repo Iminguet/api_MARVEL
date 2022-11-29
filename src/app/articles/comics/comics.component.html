@@ -1,1 +1,18 @@
-<p>comics works!</p>
+<div class="nano" *ngIf="comicsArray != null">
+  <div class="carjeta" *ngFor="let comic of comicsArray.data.results">
+    <a routerLink="/detailcomic/{{ comic.id }}">
+      <div class="elementCard">
+        <img
+          src="{{ comic.thumbnail.path }}/portrait_fantastic.{{
+            comic.thumbnail.extension
+          }}"
+          alt="{{ comic.title }}"
+        />
+
+        <div class="cbody">
+          {{ comic.title }}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
