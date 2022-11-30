@@ -8,13 +8,13 @@ import { CharactersService } from '../characters.service';
 export class PaginationComponent {
   constructor(private service: CharactersService) {}
 
-  nextPage() {
-    this.service.nextPage();
-  }
+  // nextPage() {
+  //   this.service.nextPage();
+  // }
 
-  previusPage() {
-    this.service.previusPage();
-  }
+  // previusPage() {
+  //   this.service.previusPage();
+  // }
 
   ngOnInit(): void {
     // nextPage();

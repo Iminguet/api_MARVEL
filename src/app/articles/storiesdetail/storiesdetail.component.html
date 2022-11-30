@@ -1,0 +1,66 @@
+<div class="detalle" *ngIf="storie != null">
+  <div class="imageAnTitle">
+    <div class="info">
+      <h5>id: {{ storie.data.results[0].id }}</h5>
+      <h5>Title: {{ storie.data.results[0].title }}</h5>
+      <h5>End date: {{ storie.data.results[0].end }}</h5>
+
+      <div class="anchors">
+        <a href="{{ storie.data.results[0].urls[0].url }}"
+          >Marvel's official detail web</a
+        >
+        <a href="{{ storie.data.results[0].urls[1].url }}"
+          >Marvel's official wiki</a
+        >
+        <!--   <a href="{{ storie.data.results[0].urls[2].url }}"
+          >Marvel's official stories hub</a
+        > -->
+      </div>
+    </div>
+  </div>
+
+  <div class="listItems">
+    <div class="list">
+      <div class="cabeceraLista">Series</div>
+      <div class="detalle" *ngIf="characterDetail != null">
+        <div *ngFor="let unitarySerie of characterDetail">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        Artist: A resource list containing the artists associated with this
+        storie.
+      </div>
+      <div *ngFor="let creator of storie.data.results[0].creators.items">
+        <div>{{ creator.role | uppercase }}: {{ creator.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        Characters: A resource list containing the characters which appear in
+        this storie.
+      </div>
+      <div *ngFor="let character of storie.data.results[0].characters.items">
+        <div>{{ character.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        A resource list containing series in which this story appears.
+      </div>
+      <div *ngFor="let serie of storie.data.results[0].series.items">
+        <div>{{ serie.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>
