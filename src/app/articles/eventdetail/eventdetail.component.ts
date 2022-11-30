@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EventdetailComponent {
   event: any = {};
-
+  charDetail: any = [];
   id: any;
 
   constructor(
@@ -23,6 +23,11 @@ export class EventdetailComponent {
     this.characterData
       .getEventId(this.id)
       .subscribe((dataEvent) => (this.event = dataEvent));
+
+    this.characterData.getCharactersEvents(this.id).subscribe((result) => {
+      this.charDetail = result.data.results;
+      console.log(this.charDetail);
+    });
   }
 
   getCharacterId(): void {}

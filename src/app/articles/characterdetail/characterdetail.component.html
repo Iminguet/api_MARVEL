@@ -34,29 +34,68 @@
 
   <div class="listItems">
     <div class="list">
-      <div class="cabeceraLista">comics</div>
-      <div *ngFor="let comic of character.data.results[0].comics.items">
-        <div>
-          {{ comic.name }}
+      <div class="cabeceraLista">Comics</div>
+      <div class="detalle" *ngIf="comicsDetail != null">
+        <div *ngFor="let unitaryComic of comicsDetail">
+          <a routerLink="/detailcomic/{{ unitaryComic.id }}">
+            <img
+              src="{{ unitaryComic.thumbnail.path }}/portrait_incredible.{{
+                unitaryComic.thumbnail.extension
+              }}"
+              alt="{{ unitaryComic.title }}"
+            />
+            <h5>{{ unitaryComic.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="cabeceraLista">Series</div>
+      <div class="detalle" *ngIf="seriesDetail != null">
+        <div *ngFor="let unitarySerie of seriesDetail">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
         </div>
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">Series</div>
-      <div *ngFor="let serie of character.data.results[0].series.items">
-        <div>{{ serie.name }}</div>
-      </div>
-    </div>
-    <div class="list">
       <div class="cabeceraLista">Events</div>
-      <div *ngFor="let event of character.data.results[0].events.items">
-        <div>{{ event.name }}</div>
+      <div class="detalle" *ngIf="eventsDetail != null">
+        <div *ngFor="let unitarySerie of eventsDetail">
+          <a routerLink="/detailevent/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
       </div>
     </div>
     <div class="list">
       <div class="cabeceraLista">Stories</div>
-      <div *ngFor="let storie of character.data.results[0].stories.items">
-        <div>{{ storie.name }}</div>
+      <div class="detalle" *ngIf="storiesDetail != null">
+        <div *ngFor="let unitarySerie of storiesDetail">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
       </div>
     </div>
   </div>

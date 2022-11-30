@@ -14,6 +14,10 @@ import { ComicdetailComponent } from './comicdetail/comicdetail.component';
 import { CreatordetailComponent } from './creatordetail/creatordetail.component';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
 import { CharacterdetailComponent } from './characterdetail/characterdetail.component';
+import { StoriesComponent } from './stories/stories.component';
+import { StoriesdetailComponent } from './storiesdetail/storiesdetail.component';
+import { SeriesComponent } from './series/series.component';
+import { SeriesdetailComponent } from './seriesdetail/seriesdetail.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { CharacterdetailComponent } from './characterdetail/characterdetail.comp
     CreatordetailComponent,
     EventdetailComponent,
     CharacterdetailComponent,
+    StoriesComponent,
+    StoriesdetailComponent,
+    SeriesComponent,
+    SeriesdetailComponent,
   ],
   imports: [CommonModule, HttpClientModule, RouterModule],
   providers: [CharactersService],
