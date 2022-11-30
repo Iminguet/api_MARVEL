@@ -1,0 +1,11 @@
+<div class="nano" *ngIf="storiesArray != null">
+  <div class="carjeta" *ngFor="let event of storiesArray.data.results">
+    <a routerLink="/detailstories/{{ event.id }}">
+      <div class="elementCard">
+        <div class="cbody">
+          <h6>{{ event.title }}</h6>
+        </div>
+      </div></a
+    >
+  </div>
+</div>

@@ -13,13 +13,6 @@
       <h5>End date: {{ event.data.results[0].end | date }}</h5>
 
       <p>{{ event.data.results[0].description }}</p>
-      <!--<div *ngIf="event.data.results[0].description != ''; else elseBlock">
-        <p>{{ event.data.results[0].description }}</p>
-      </div>
-      <ng-template #elseBlock
-        >There is no information about {{ event.data.results[0].title }}, try in
-        the links below
-      </ng-template> -->
 
       <div class="anchors">
         <a href="{{ event.data.results[0].urls[0].url }}"
@@ -28,9 +21,6 @@
         <a href="{{ event.data.results[0].urls[1].url }}"
           >Marvel's official wiki</a
         >
-        <!--   <a href="{{ event.data.results[0].urls[2].url }}"
-          >Marvel's official events hub</a
-        > -->
       </div>
     </div>
   </div>
@@ -56,12 +46,19 @@
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        Characters: A resource list containing the characters which appear in
-        this event.
-      </div>
-      <div *ngFor="let character of event.data.results[0].characters.items">
-        <div>{{ character.name }}</div>
+      <div class="cabeceraLista">Events</div>
+      <div class="detalle" *ngIf="charDetail != null">
+        <div *ngFor="let unitarySerie of charDetail">
+          <a routerLink="/detail/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.name }}</h5>
+          </a>
+        </div>
       </div>
     </div>
     <div class="list">
