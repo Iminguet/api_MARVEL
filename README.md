@@ -1,35 +1,25 @@
 # ApiMARVEL
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Este proyecto fue desarrollado en Angular [Angular CLI]version 15.0.0.
 
-## GitHub deploy
-
-https://iminguet.github.io/api_MARVEL/
-
-## AWS Deploy. Only from deploy branch.
+## AWS Deploy. Consulta en vivo nuestra versión de producción con el link de abajo
 
 https://deploy.d3emmyy5ix9ett.amplifyapp.com/
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Planteamiento
+Como grupo, trabajamos sobre una API pública para estructurar una aplicación web, que nos permita realizar distintas consultas a la misma. Además permitiremos el registro y el inicio de sesión a aquellas personas que lo deseen, utilizando para este fin Firebase AUTH.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Funcionamiento
+Este proyecto esta divido en componentes y modulos. La primera vez que el usuario entra a la página, se generará un componente de registro de usuario. El usuario se registrará, lo que hara que lo redireccione al componente login. De la misma forma cuando el usuario entre a la sección de Personajes, se le mostrará una serie de tarjetas obtenidas mediante una consulta con un servicio apuntando a la API pública de Marvel.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Roadmap (o mejoras para el futuro)
+ - Implementar icono/botón de usuario para poder consultar su perfil.
+ - Desarrollar e implementar la funcionalidad de la barra de búsqueda, actualmente maquetada pero no funcional.
+ - Pulir la paleta de colores y la maquetación de la página.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   
+## Agradecimientos 
+Queremos darle las gracias a Urbalab y al equipo Geekshubs por esta oportunidad, y todas aquellas organizaciones y personas que se han pasado por este proyecto y/o han participado en el mismo. Estamos agradecidos con aquellos que creen en nuestro equipo y en nuestra capacidad de aprender y sobrepasar nuestros límites. Una vez mas gracias.
