@@ -82,21 +82,5 @@
         </div>
       </div>
     </div>
-    <div class="list">
-      <div class="cabeceraLista">Stories</div>
-      <div class="detalle" *ngIf="storiesDetail != null">
-        <div *ngFor="let unitarySerie of storiesDetail">
-          <a routerLink="/detailseries/{{ unitarySerie.id }}">
-            <img
-              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
-                unitarySerie.thumbnail.extension
-              }}"
-              alt="{{ unitarySerie.title }}"
-            />
-            <h5>{{ unitarySerie.title }}</h5>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>

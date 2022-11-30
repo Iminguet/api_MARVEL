@@ -1,1 +1,18 @@
-<p>series works!</p>
+<div class="nano" *ngIf="seriesArray != null">
+  <div class="carjeta" *ngFor="let event of seriesArray.data.results">
+    <a routerLink="/detailseries/{{ event.id }}">
+      <div class="elementCard">
+        <img
+          class="circular"
+          src="{{ event.thumbnail.path }}/standard_fantastic.{{
+            event.thumbnail.extension
+          }}"
+          alt="{{ event.title }}"
+        />
+        <div class="cbody">
+          <h6>{{ event.title }}</h6>
+        </div>
+      </div></a
+    >
+  </div>
+</div>

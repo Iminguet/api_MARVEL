@@ -15,13 +15,6 @@
       <h5>Start date: {{ creator.data.results[0].start | date }}</h5>
       <h5>End date: {{ creator.data.results[0].end | date }}</h5>
       <p>{{ creator.data.results[0].description }}</p>
-      <!--<div *ngIf="creator.data.results[0].description != ''; else elseBlock">
-        <p>{{ creator.data.results[0].description }}</p>
-      </div>
-      <ng-template #elseBlock
-        >There is no information about {{ creator.data.results[0].title }}, try in
-        the links below
-      </ng-template> -->
 
       <div class="anchors">
         <a href="{{ creator.data.results[0].urls[0].url }}">
@@ -36,46 +29,74 @@
         > -->
         <h1>{{ creator.data.results[0].fullName }}</h1>
       </div>
-      <a href="">{{ hola }}</a>
+      <a href=""></a>
     </div>
   </div>
 
   <div class="listItems">
     <div class="list">
-      <div class="cabeceraLista">
-        A resource list containing comics in which this story takes place.
-        <h1>{{ creator.data.results["comics"] }}</h1>
+      <div class="cabeceraLista">Comics</div>
+      <div class="detalle" *ngIf="comics != null">
+        <div *ngFor="let unitaryComic of comics">
+          <a routerLink="/detailcomic/{{ unitaryComic.id }}">
+            <img
+              src="{{ unitaryComic.thumbnail.path }}/portrait_incredible.{{
+                unitaryComic.thumbnail.extension
+              }}"
+              alt="{{ unitaryComic.title }}"
+            />
+            <h5>{{ unitaryComic.title }}</h5>
+          </a>
+        </div>
       </div>
-      <div *ngFor="let comic of creator.data.results['comics'].items">
-        <div>
-          {{ comic.name }}
+    </div>
+
+    <div class="list">
+      <div class="cabeceraLista">Series</div>
+      <div class="detalle" *ngIf="series != null">
+        <div *ngFor="let unitarySerie of series">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
         </div>
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        Artist: A resource list containing the artists associated with this
-        creator.
-      </div>
-      <!-- <div *ngFor="let creator of creator.data.results[0].creators.items">
-        <div>{{ creator.role | uppercase }}: {{ creator.name }}</div>
-      </div> -->
-    </div>
-    <div class="list">
-      <div class="cabeceraLista">
-        Characters: A resource list containing the characters which appear in
-        this creator.
-      </div>
-      <div *ngFor="let character of creator.data.results[0].characters.items">
-        <div>{{ character.name }}</div>
+      <div class="cabeceraLista">Events</div>
+      <div class="detalle" *ngIf="events != null">
+        <div *ngFor="let unitarySerie of events">
+          <a routerLink="/detailevent/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        A resource list containing series in which this story appears.
-      </div>
-      <div *ngFor="let serie of creator.data.results[0].series.items">
-        <div>{{ serie.name }}</div>
+      <div class="cabeceraLista">Stories</div>
+      <div class="detalle" *ngIf="stories != null">
+        <div *ngFor="let unitarySerie of stories">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
       </div>
     </div>
   </div>

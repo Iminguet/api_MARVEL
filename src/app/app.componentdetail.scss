@@ -1,11 +1,12 @@
 .listItems {
   margin-top: 2em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   .list {
-    border: 2px solid black;
-    width: 22%;
+    background-color: beige;
+    width: 30%;
+    border: 2px solid white;
     .cabeceraLista {
       font-weight: bold;
       text-align: center;
@@ -13,12 +14,33 @@
       margin: 0.5em 0;
     }
     .detalle {
+      width: 100%;
+      padding: 0.5em;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      img {
-        width: 100%;
+      div {
+        height: 20vw;
+        text-align: center;
+        a {
+          height: 100%;
+          margin-top: 0.5em;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+
+          img {
+            width: 50%;
+          }
+          h5 {
+            width: 100%;
+            text-align: center;
+            background-color: black;
+            color: white;
+          }
+        }
       }
     }
   }

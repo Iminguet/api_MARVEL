@@ -27,12 +27,18 @@
 
   <div class="listItems">
     <div class="list">
-      <div class="cabeceraLista">
-        A resource list containing comics in which this story takes place.
-      </div>
-      <div *ngFor="let comic of event.data.results[0].comics.items">
-        <div>
-          {{ comic.name }}
+      <div class="cabeceraLista">Comics</div>
+      <div class="detalle" *ngIf="comics != null">
+        <div *ngFor="let unitaryComic of comics">
+          <a routerLink="/detailcomic/{{ unitaryComic.id }}">
+            <img
+              src="{{ unitaryComic.thumbnail.path }}/portrait_incredible.{{
+                unitaryComic.thumbnail.extension
+              }}"
+              alt="{{ unitaryComic.title }}"
+            />
+            <h5>{{ unitaryComic.title }}</h5>
+          </a>
         </div>
       </div>
     </div>
@@ -46,9 +52,9 @@
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">Events</div>
-      <div class="detalle" *ngIf="charDetail != null">
-        <div *ngFor="let unitarySerie of charDetail">
+      <div class="cabeceraLista">Characters</div>
+      <div class="detalle" *ngIf="character != null">
+        <div *ngFor="let unitarySerie of character">
           <a routerLink="/detail/{{ unitarySerie.id }}">
             <img
               src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
