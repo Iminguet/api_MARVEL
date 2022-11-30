@@ -1,4 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +28,7 @@ import { UserAccessModule } from './user-access/user-access.module';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     ReactiveFormsModule,
+    CommonModule,
   ],
 })
 export class AppModule {}
