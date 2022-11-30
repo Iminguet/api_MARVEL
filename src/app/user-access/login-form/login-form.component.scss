@@ -1,0 +1,19 @@
+.logo {
+  width: 10%;
+}
+
+.card-img-top {
+  margin: 0.5em 0;
+}
+
+button {
+  background-color: rgb(236, 231, 231);
+  border: 3px solid white;
+  font-weight: bold;
+  margin: 0.5em 0;
+
+  &:hover {
+    background-color: red;
+    color: white;
+  }
+}
