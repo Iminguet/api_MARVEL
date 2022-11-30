@@ -1,0 +1,18 @@
+<div class="nano" *ngIf="creatorsArray != null">
+  <div class="carjeta" *ngFor="let creator of creatorsArray.data.results">
+    <a routerLink="/detailcreator/{{ creator.id }}">
+      <div class="elementCard">
+        <img
+          src="{{ creator.thumbnail.path }}/portrait_fantastic.{{
+            creator.thumbnail.extension
+          }}"
+          alt="{{ creator.fullName }}"
+        />
+
+        <div class="cbody">
+          <p>{{ creator.fullName }}</p>
+        </div>
+      </div></a
+    >
+  </div>
+</div>

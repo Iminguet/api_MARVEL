@@ -1,0 +1,102 @@
+<div class="detalle" *ngIf="character != null">
+  <div class="imageAnTitle">
+    <img
+      src="{{ character.data.results[0].thumbnail.path }}/portrait_incredible.{{
+        character.data.results[0].thumbnail.extension
+      }}"
+      alt="{{ character.data.results[0].name }}"
+    />
+    <div class="info">
+      <h1>{{ character.data.results[0].name }}</h1>
+      <h5>id: {{ character.data.results[0].id }}</h5>
+
+      <div *ngIf="character.data.results[0].description != ''; else elseBlock">
+        <p>{{ character.data.results[0].description }}</p>
+      </div>
+      <ng-template #elseBlock
+        >There is no information about {{ character.data.results[0].name }}, try
+        in the links below
+      </ng-template>
+
+      <div class="anchors">
+        <a href="{{ character.data.results[0].urls[0].url }}"
+          >Marvel's official detail web</a
+        >
+        <a href="{{ character.data.results[0].urls[1].url }}"
+          >Marvel's official wiki</a
+        >
+        <a href="{{ character.data.results[0].urls[2].url }}"
+          >Marvel's official comics hub</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="listItems">
+    <div class="list">
+      <div class="cabeceraLista">Comics</div>
+      <div class="detalle" *ngIf="comicsDetail != null">
+        <div *ngFor="let unitaryComic of comicsDetail">
+          <a routerLink="/detailcomic/{{ unitaryComic.id }}">
+            <img
+              src="{{ unitaryComic.thumbnail.path }}/portrait_incredible.{{
+                unitaryComic.thumbnail.extension
+              }}"
+              alt="{{ unitaryComic.title }}"
+            />
+            <h5>{{ unitaryComic.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="list">
+      <div class="cabeceraLista">Series</div>
+      <div class="detalle" *ngIf="seriesDetail != null">
+        <div *ngFor="let unitarySerie of seriesDetail">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Events</div>
+      <div class="detalle" *ngIf="eventsDetail != null">
+        <div *ngFor="let unitarySerie of eventsDetail">
+          <a routerLink="/detailevent/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Stories</div>
+      <div class="detalle" *ngIf="storiesDetail != null">
+        <div *ngFor="let unitarySerie of storiesDetail">
+          <a routerLink="/detailseries/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,76 @@
-<h1>Deploy marvel api from deploy branch</h1>
+<div class="container-fluid">
+  <div class="row sticky-top bg-light d-none d-sm-block justify-content-center align-items-center"
+    style=" height: 13vh; background-color: #ED1D24;">
+    <div class="col-sm-2">
+      <img class=" img-thumbnail" src="../assets/marvel-logo.svg" alt="" />
+    </div>
+    <div class="col"></div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg bg-light d-block d-sm-none">
+    <div class="container-fluid" style="background-color: #ED1D24">
+      <a class="navbar-brand" href="#">
+        <img class="img-fluid img-thumbnail" src="../assets/marvel-logo.svg" alt="" style="max-width: 10em;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link text-white font-weight-bold" aria-current="page" href="#">Home</a>
+          <a class="nav-link text-white font-weight-bold" routerLink="/comics">Comics</a>
+          <a class="nav-link text-white font-weight-bold" routerLink="/events">Eventos</a>
+          <a class="nav-link text-white font-weight-bold" routerLink="/creators">Creadores</a>
+          <a class="nav-link text-white font-weight-bold" routerLink="/about">¿Quiénes somos?</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="row " style="height: 87vh">
+    <!-- LARGER THAN SM AND MD -->
+    <div class="col-sm-2 d-none d-sm-block" style="background-color: #ED1D24; min-width: 8em">
+      <div class="row mt-5">
+        <div class="col d-none d-lg-block">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Busca..." aria-label="Búsqueda"
+              aria-describedby="basic-addon2" />
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary bg-light" type="button">
+                Buscar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center mt-5 d-none d-sm-block">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <a routerLink="/characters"
+            class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold">Characters</a>
+        </div>
+      </div>
+      <div class="row text-center mt-5">
+        <a routerLink="/comics"
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold">Comics</a>
+      </div>
+      <div class="row text-center mt-5 ">
+        <a routerLink="/events"
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold">Events</a>
+      </div>
+      <div class="row text-center mt-5">
+        <a routerLink="/creators"
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold">Authors</a>
+      </div>
+      <div class="row text-center mt-5">
+        <a routerLink="/about"
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold">Nosotros</a>
+      </div>
+    </div>
+    <div class="col d-flex align-items-center justify-content-center">
+      <div class="col d-flex align-items-center justify-content-center">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

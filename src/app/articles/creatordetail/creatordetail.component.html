@@ -1,0 +1,82 @@
+<!-- <div class="detalle" *ngIf="creator != null">
+  <h1>{{ creator.data.results[0].name }}</h1>
+</div> -->
+<div class="detalle" *ngIf="creator != null">
+  <div class="imageAnTitle">
+    <img
+      src="{{ creator.data.results[0].thumbnail.path }}/portrait_incredible.{{
+        creator.data.results[0].thumbnail.extension
+      }}"
+      alt="{{ creator.data.results[0].title }}"
+    />
+    <div class="info">
+      <h1>{{ creator.data.results[0].fullName }}</h1>
+      <h5>id: {{ creator.data.results[0].id }}</h5>
+      <h5>Start date: {{ creator.data.results[0].start | date }}</h5>
+      <h5>End date: {{ creator.data.results[0].end | date }}</h5>
+      <p>{{ creator.data.results[0].description }}</p>
+      <!--<div *ngIf="creator.data.results[0].description != ''; else elseBlock">
+        <p>{{ creator.data.results[0].description }}</p>
+      </div>
+      <ng-template #elseBlock
+        >There is no information about {{ creator.data.results[0].title }}, try in
+        the links below
+      </ng-template> -->
+
+      <div class="anchors">
+        <a href="{{ creator.data.results[0].urls[0].url }}">
+          Marvel's official detail web
+        </a>
+        <a href="{{ creator.data.results[0].urls[1].url }}">
+          Marvel's official wiki
+        </a>
+        <h1>{{ creator.data.results[0].fullName }}Kilo</h1>
+        <!--   <a href="{{ creator.data.results[0].urls[2].url }}"
+          >Marvel's official creators hub</a
+        > -->
+        <h1>{{ creator.data.results[0].fullName }}</h1>
+      </div>
+      <a href="">{{ hola }}</a>
+    </div>
+  </div>
+
+  <div class="listItems">
+    <div class="list">
+      <div class="cabeceraLista">
+        A resource list containing comics in which this story takes place.
+        <h1>{{ creator.data.results["comics"] }}</h1>
+      </div>
+      <div *ngFor="let comic of creator.data.results['comics'].items">
+        <div>
+          {{ comic.name }}
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        Artist: A resource list containing the artists associated with this
+        creator.
+      </div>
+      <!-- <div *ngFor="let creator of creator.data.results[0].creators.items">
+        <div>{{ creator.role | uppercase }}: {{ creator.name }}</div>
+      </div> -->
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        Characters: A resource list containing the characters which appear in
+        this creator.
+      </div>
+      <div *ngFor="let character of creator.data.results[0].characters.items">
+        <div>{{ character.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        A resource list containing series in which this story appears.
+      </div>
+      <div *ngFor="let serie of creator.data.results[0].series.items">
+        <div>{{ serie.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>

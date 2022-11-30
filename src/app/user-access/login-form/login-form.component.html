@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-start align-items-center w-100 h-100"
+  style=" border: 1px solid black; background-color: blue;">
+
+  <div class="row">
+    <div class="col">
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="mx-5">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">He leído y acepto las condiciones estipuladas</label>
+        </div>
+        <input type="submit" value="Enviar">
+      </form>
+      <button class="btn btn-info" (click)="onClick()">Log in with Google</button>
+    </div>
+
+    <!-- Imagen aleatoria -->
+    <div class="col d-flex justify-content-center align-items-center">
+      <div class="card" style="width: 18rem;">
+        <img src="../../../assets/marvelLogo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="detalle" *ngIf="event != null">
+  <div class="imageAnTitle">
+    <img
+      src="{{ event.data.results[0].thumbnail.path }}/portrait_incredible.{{
+        event.data.results[0].thumbnail.extension
+      }}"
+      alt="{{ event.data.results[0].title }}"
+    />
+    <div class="info">
+      <h1>{{ event.data.results[0].title }}</h1>
+      <h5>id: {{ event.data.results[0].id }}</h5>
+      <h5>Start date: {{ event.data.results[0].start | date }}</h5>
+      <h5>End date: {{ event.data.results[0].end | date }}</h5>
+
+      <p>{{ event.data.results[0].description }}</p>
+
+      <div class="anchors">
+        <a href="{{ event.data.results[0].urls[0].url }}"
+          >Marvel's official detail web</a
+        >
+        <a href="{{ event.data.results[0].urls[1].url }}"
+          >Marvel's official wiki</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="listItems">
+    <div class="list">
+      <div class="cabeceraLista">
+        A resource list containing comics in which this story takes place.
+      </div>
+      <div *ngFor="let comic of event.data.results[0].comics.items">
+        <div>
+          {{ comic.name }}
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        Artist: A resource list containing the artists associated with this
+        event.
+      </div>
+      <div *ngFor="let creator of event.data.results[0].creators.items">
+        <div>{{ creator.role | uppercase }}: {{ creator.name }}</div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">Events</div>
+      <div class="detalle" *ngIf="charDetail != null">
+        <div *ngFor="let unitarySerie of charDetail">
+          <a routerLink="/detail/{{ unitarySerie.id }}">
+            <img
+              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
+                unitarySerie.thumbnail.extension
+              }}"
+              alt="{{ unitarySerie.title }}"
+            />
+            <h5>{{ unitarySerie.name }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="list">
+      <div class="cabeceraLista">
+        A resource list containing series in which this story appears.
+      </div>
+      <div *ngFor="let serie of event.data.results[0].series.items">
+        <div>{{ serie.name }}</div>
+      </div>
+    </div>
+  </div>
+</div>
