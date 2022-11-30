@@ -21,3 +21,5 @@ Este proyecto esta divido en componentes y modulos. La primera vez que el usuari
  - Pulir la paleta de colores y la maquetación de la página.
 
    
+## Agradecimientos 
+Queremos darle las gracias a Urbalab y al equipo Geekshubs por esta oportunidad, y todas aquellas organizaciones y personas que se han pasado por este proyecto y/o han participado en el mismo. Estamos agradecidos con aquellos que creen en nuestro equipo y en nuestra capacidad de aprender y sobrepasar nuestros límites. Una vez mas gracias.
