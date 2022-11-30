@@ -17,6 +17,7 @@ import { SeriesComponent } from './articles/series/series.component';
 import { SeriesdetailComponent } from './articles/seriesdetail/seriesdetail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/register', pathMatch: 'full' },
   { path: 'about', component: AboutusComponent },
   { path: 'login', component: LoginFormComponent },
   { path: 'register', component: RegisterFormComponent },
