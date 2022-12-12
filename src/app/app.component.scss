@@ -1,7 +1,7 @@
 .logo_container {
   background-color: #ed1d24;
   padding: 0.5em;
-  height: 100%;
+
   img {
     background-color: #ed1d24;
   }
@@ -50,6 +50,40 @@
 }
 
 @media (min-width: 768px) {
+  .posFx {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      margin-top: 12em;
+      position: absolute;
+    }
+    div {
+      div {
+        input {
+          width: 5vw;
+        }
+      }
+    }
+  }
+
+  .characters {
+    top: 5em;
+  }
+  .comics {
+    top: 8em;
+  }
+  .events {
+    top: 11em;
+  }
+  .authors {
+    top: 14em;
+  }
+
+  .aboutUs {
+    top: 17em;
+  }
   .nano {
     .carjeta {
       width: 15vw;

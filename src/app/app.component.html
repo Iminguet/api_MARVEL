@@ -3,7 +3,7 @@
     class="row sticky-top bg-transparent d-none d-sm-block justify-content-center align-items-center logo"
     style="height: 13vh; background-color: #ed1d24"
   >
-    <div class="col-sm-2 logo_container">
+    <div class="col-sm-2 logo_container fixed-top">
       <img class="img-thumbnail" src="../assets/marvel-logo.svg" alt="" />
     </div>
     <div class="col"></div>
@@ -41,19 +41,19 @@
           <a
             class="nav-link text-white font-weight-bold"
             routerLink="/characters"
-            >Personajes</a
+            >Characters</a
           >
           <a class="nav-link text-white font-weight-bold" routerLink="/comics"
             >Comics</a
           >
           <a class="nav-link text-white font-weight-bold" routerLink="/events"
-            >Eventos</a
+            >Events</a
           >
           <a class="nav-link text-white font-weight-bold" routerLink="/creators"
-            >Creadores</a
+            >Authors</a
           >
           <a class="nav-link text-white font-weight-bold" routerLink="/about"
-            >¿Quiénes somos?</a
+            >About us</a
           >
         </div>
       </div>
@@ -65,60 +65,59 @@
     <div
       class="col-sm-2 d-none d-sm-block"
       style="background-color: #ed1d24; min-width: 8em"
+      id="varMD"
     >
-      <div class="row mt-5">
-        <div class="col d-none d-lg-block">
+      <div class="row mt-5 posFx">
+        <div class="col-12">
           <div class="input-group mb-3">
             <input
               type="text"
-              class="form-control"
-              placeholder="Busca..."
+              class="form-control col-12"
+              placeholder="Search..."
               aria-label="Búsqueda"
               aria-describedby="basic-addon2"
             />
-            <div class="input-group-append">
+            <div class="input-group-append col-12">
               <button class="btn btn-outline-primary bg-light" type="button">
-                Buscar
+                Search
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="row text-center mt-5 d-none d-sm-block">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <a
-            routerLink="/characters"
-            class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
-            >Characters</a
-          >
-        </div>
+      <div class="row text-center mt-5 posFx characters">
+        <a
+          routerLink="/characters"
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
+          >Characters</a
+        >
       </div>
-      <div class="row text-center mt-5">
+      <div class="row text-center mt-5 posFx comics">
         <a
           routerLink="/comics"
           class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
           >Comics</a
         >
       </div>
-      <div class="row text-center mt-5">
+      <div class="row text-center mt-5 posFx events">
         <a
           routerLink="/events"
           class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
           >Events</a
         >
       </div>
-      <div class="row text-center mt-5">
+      <div class="row text-center mt-5 posFx authors">
         <a
           routerLink="/creators"
           class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
           >Authors</a
         >
       </div>
-      <div class="row text-center mt-5">
+      <div class="row text-center mt-5 posFx aboutUs">
         <a
           routerLink="/about"
-          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold"
-          >Nosotros</a
+          class="col d-none d-sm-block text-decoration-none h5 text-white font-weight-bold text-nowrap"
+          >About us</a
         >
       </div>
     </div>
