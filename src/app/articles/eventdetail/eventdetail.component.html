@@ -43,10 +43,7 @@
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        Artist: A resource list containing the artists associated with this
-        event.
-      </div>
+      <div class="cabeceraLista">Artist:</div>
       <div *ngFor="let creator of event.data.results[0].creators.items">
         <div>{{ creator.role | uppercase }}: {{ creator.name }}</div>
       </div>
@@ -68,9 +65,7 @@
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        A resource list containing series in which this story appears.
-      </div>
+      <div class="cabeceraLista">Series:</div>
       <div *ngFor="let serie of event.data.results[0].series.items">
         <div>{{ serie.name }}</div>
       </div>
