@@ -13,10 +13,10 @@
       <h5>Number of pages: {{ comic.data.results[0].pageCount }}</h5>
       <h5>
         Publication date:
-        {{ comic.data.results[0].dates[1].date | date: "d/M/y" }}
+        {{ comic.data.results[0].dates[1].date | date : "d/M/y" }}
       </h5>
       <h5>
-        Price: {{ comic.data.results[0].prices[0].price | currency: "$" }}
+        Price: {{ comic.data.results[0].prices[0].price | currency : "$" }}
       </h5>
       <p>{{ comic.data.results[0].description }}</p>
 
@@ -30,30 +30,16 @@
 
   <div class="listItems">
     <div class="list">
-      <div class="cabeceraLista">List of issues collected</div>
-      <div class="detalle" *ngIf="events != null">
-        <div *ngFor="let unitarySerie of events">
-          <a routerLink="/detailevent/{{ unitarySerie.id }}">
-            <img
-              src="{{ unitarySerie.thumbnail.path }}/portrait_incredible.{{
-                unitarySerie.thumbnail.extension
-              }}"
-              alt="{{ unitarySerie.title }}"
-            />
-            <h5>{{ unitarySerie.title }}</h5>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="list">
-      <div class="cabeceraLista">
-        Artist: A resource list containing the artists associated with this
-        comic.
-      </div>
+      <div class="cabeceraLista">Artist:</div>
       <div class="detalle" *ngIf="creators != null">
         <div *ngFor="let creator of creators">
           <a routerLink="/detailcreator/{{ creator.id }}">
+            <img
+              src="{{ creator.thumbnail.path }}/portrait_incredible.{{
+                creator.thumbnail.extension
+              }}"
+              alt="{{ creator.name }}"
+            />
             <div>{{ creator.fullName }}</div>
           </a>
         </div>
@@ -61,10 +47,7 @@
     </div>
 
     <div class="list">
-      <div class="cabeceraLista">
-        Characters: A resource list containing the characters which appear in
-        this comic.
-      </div>
+      <div class="cabeceraLista">Characters:</div>
       <div class="detalle" *ngIf="character != null">
         <div *ngFor="let unitarySerie of character">
           <a routerLink="/detail/{{ unitarySerie.id }}">
@@ -80,14 +63,12 @@
       </div>
     </div>
     <div class="list">
-      <div class="cabeceraLista">
-        Stories: A resource list containing the stories which appear in this
-        comic.
-      </div>
+      <div class="cabeceraLista">Stories:</div>
       <div class="detalle" *ngIf="stories != null">
         <div *ngFor="let unitarySerie of stories">
           <a routerLink="/detailstories/{{ unitarySerie.id }}">
             <h5>{{ unitarySerie.title }}</h5>
+            <h6>{{ unitarySerie.description }}</h6>
           </a>
         </div>
       </div>
