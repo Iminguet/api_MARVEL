@@ -24,6 +24,9 @@
       div {
         text-align: center;
         margin-bottom: 2vh;
+        box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
         a {
           height: 70vw;
           margin-top: 0.5em;
@@ -81,6 +84,7 @@
         margin-bottom: 2vh;
         div {
           width: 100%;
+
           a {
             height: 70vw;
           }
@@ -117,9 +121,19 @@
     .list {
       .detalle {
         width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
         div {
+          width: 40%;
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
           a {
-            height: 45vw;
+            height: 20vw;
           }
         }
       }

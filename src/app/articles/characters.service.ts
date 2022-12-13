@@ -18,7 +18,7 @@ export class CharactersService {
   stories: string = 'stories';
   series: string = 'series;';
   id: number = 0;
-  limit: number = 16;
+  limit: number = 15;
   offSet: number = 0;
 
   baserUrl: string = 'https://gateway.marvel.com:443/v1/public/';

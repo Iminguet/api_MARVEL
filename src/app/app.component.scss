@@ -1,7 +1,7 @@
 .logo_container {
   background-color: #ed1d24;
   padding: 0.5em;
-  height: 100%;
+  height: 15vh;
   img {
     background-color: #ed1d24;
   }
@@ -49,7 +49,52 @@
   }
 }
 
+input {
+  width: 8vw;
+  border: 2px solid black;
+}
+
 @media (min-width: 768px) {
+  .posFx {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      margin-top: 12em;
+      position: absolute;
+    }
+    div {
+      div {
+        input {
+          width: 5vw;
+          border: 2px solid black;
+        }
+      }
+    }
+  }
+
+  .characters {
+    top: 5em;
+    margin: 0 2vw;
+  }
+  .comics {
+    top: 8em;
+    margin: 0 2vw;
+  }
+  .events {
+    top: 11em;
+    margin: 0 2vw;
+  }
+  .authors {
+    top: 14em;
+    margin: 0 2vw;
+  }
+
+  .aboutUs {
+    top: 17em;
+    margin: 0 2vw;
+  }
   .nano {
     .carjeta {
       width: 15vw;
